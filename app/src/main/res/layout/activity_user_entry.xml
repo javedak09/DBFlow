@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context=".UserEntry">
 
     <data>
 
@@ -11,7 +11,7 @@
 
         <variable
             name="callback"
-            type="com.example.javedak09.dbflow.MainActivity" />
+            type="com.example.javedak09.dbflow.UserEntry" />
 
     </data>
 
@@ -26,10 +26,27 @@
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="UserName"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/UserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                android:maxLength="50" />
+
             <Button
                 android:id="@+id/btnAddRecord"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> callback.SaveData()}"
                 android:text="Add Record" />
 
         </LinearLayout>
