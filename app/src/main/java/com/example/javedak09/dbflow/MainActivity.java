@@ -6,26 +6,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.raizlabs.android.dbflow.config.FlowConfig;
-import com.raizlabs.android.dbflow.config.FlowManager;
-
 public class MainActivity extends Activity {
 
     Button btnAddRecord;
+    Button btnDBManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FlowManager.init(new FlowConfig.Builder(this).build());
-
         btnAddRecord = (Button) findViewById(R.id.btnAddRecord);
+        btnDBManager = (Button) findViewById(R.id.btnDBManager);
 
         btnAddRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, UserEntry.class);
+                startActivity(intent);
+            }
+        });
+
+        btnDBManager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AndroidDatabaseManager.class);
                 startActivity(intent);
             }
         });

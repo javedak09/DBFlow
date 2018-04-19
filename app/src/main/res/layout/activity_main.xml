@@ -32,6 +32,12 @@
                 android:layout_height="wrap_content"
                 android:text="Add Record" />
 
+            <Button
+                android:id="@+id/btnDBManager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DB Manager" />
+
         </LinearLayout>
 
     </ScrollView>

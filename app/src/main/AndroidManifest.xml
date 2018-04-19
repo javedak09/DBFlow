@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="testdb.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme">
@@ -20,6 +28,9 @@
         </activity>
         <activity
             android:name=".UserEntry"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AndroidDatabaseManager"
             android:theme="@style/AppTheme" />
     </application>
 
