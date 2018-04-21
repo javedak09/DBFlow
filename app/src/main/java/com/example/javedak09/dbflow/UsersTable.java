@@ -24,6 +24,10 @@ public class UsersTable extends BaseModel {
         this.UserName = UserName;
     }
 
+    public String getUserName() {
+        return this.UserName;
+    }
+
     public void setUserStatus(String UserStatus) {
         this.UserStatus = UserStatus;
     }

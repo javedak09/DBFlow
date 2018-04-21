@@ -49,6 +49,13 @@
                 android:onClick="@{() -> callback.SaveData()}"
                 android:text="Add Record" />
 
+            <Button
+                android:id="@+id/btnGetRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> callback.GetData()}"
+                android:text="Get Data" />
+
         </LinearLayout>
 
     </ScrollView>
